@@ -93,11 +93,11 @@ const ProductScreen = ({ history, match }) => {
         <>
           <Meta title={product.name} />
           <Row>
-            <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+            <Col md={6} >
+              <Image src={product.image} alt={product.name} fluid style={{boxShadow: "5px 5px 5px #004d40"}} />
             </Col>
             <Col md={3}>
-              <ListGroup variant="flush">
+              <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40"}}>
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
                 </ListGroup.Item>
@@ -108,25 +108,12 @@ const ProductScreen = ({ history, match }) => {
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ₹{product.price}</ListGroup.Item>
-                <ListGroup.Item>
-                  Description:<br/>
 
-
-                  {
-                    arr.map(function (name, index) {
-                    return (
-                        <tr key={index}>
-                          <Col key={index}>- {name}</Col>
-                        </tr>
-                    );
-                  })}
-
-                </ListGroup.Item>
-              </ListGroup>
+              </ListGroup >
             </Col>
             <Col md={3}>
               <Card>
-                <ListGroup variant="flush">
+                <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40"}}>
                   <ListGroup.Item>
                     <Row>
                       <Col>Price:</Col>
@@ -183,12 +170,39 @@ const ProductScreen = ({ history, match }) => {
               </Card>
             </Col>
           </Row>
+          <br/>
+          <Row>
+
+
+            <Col>
+      <ListGroup style={{boxShadow: "5px 5px 5px #004d40"}}>
+              <ListGroup.Item>
+                <h2 align="center">Description</h2><br/>
+
+<span style={{fontSize:20}}>
+                {
+                  arr.map(function (name, index) {
+                    return (
+                        <tr key={index}>
+                          <Col key={index}>- {name}</Col>
+                        </tr>
+                    );
+                  })}
+</span>
+              </ListGroup.Item>
+
+      </ListGroup>
+            </Col>
+          </Row>
           <Row>
             <Col>
+
               <br />
-              <h2 align="center">Reviews</h2>
+
               {product.reviews.length === 0 && <Message>No Reviews</Message>}
-              <ListGroup variant="flush">
+              <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40",backgroundColor:"White"}}>
+                <br/>
+                <h2 align="center">Reviews</h2><br/>
                 {product.reviews.map((review) => (
                   <ListGroup.Item key={review._id}>
                     <strong>{review.name}</strong>

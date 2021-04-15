@@ -6,6 +6,7 @@ import Paginate from "../components/Paginate";
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {browseProducts} from "../actions/productActions";
+import Meta from "../components/Meta";
 
 const BrowseScreen = ({ match }) => {
 
@@ -24,6 +25,7 @@ const BrowseScreen = ({ match }) => {
 
 
 return( <div>
+        <Meta title={category} />
 <h1>{category}</h1>
 {loading ? (
     <Loader />

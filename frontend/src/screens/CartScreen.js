@@ -46,7 +46,7 @@ const CartScreen = ({ match, location, history }) => {
             Your cart is empty <Link to="/">Go Back</Link>
           </Message>
         ) : (
-          <ListGroup variant="flush">
+          <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40"}}>
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
                 <Row>
@@ -84,14 +84,16 @@ const CartScreen = ({ match, location, history }) => {
                     </Button>
                   </Col>
                 </Row>
+
               </ListGroup.Item>
             ))}
           </ListGroup>
         )}
       </Col>
       <Col md={4}>
+        <br/><br/>
         <Card>
-          <ListGroup variant="flush">
+          <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40"}}>
             <ListGroup.Item>
               <h2>
                 Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})

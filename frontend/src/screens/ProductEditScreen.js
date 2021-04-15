@@ -98,7 +98,7 @@ const ProductEditScreen = ({ match, history }) => {
       <Link to="/admin/productlist" className="btn btn-light my-3">
         <Icon icon={arrowBackThickFill} height="50" width="70" />
       </Link>
-      <FormContainer>
+      <FormContainer >
         <h1>Edit Product</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
@@ -107,14 +107,14 @@ const ProductEditScreen = ({ match, history }) => {
         ) : error ? (
           <Message variant="danger">{error}</Message>
         ) : (
-          <Form onSubmit={submitHandler}>
+          <Form onSubmit={submitHandler} style={{boxShadow: "5px 5px 5px #004d40", backgroundColor:"#90EE90",padding:20}}>
             <Form.Group controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 style={{ borderRadius: 10 }}
                 type="name"
                 placeholder="Enter name"
-                value={name}
+                // value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -136,7 +136,7 @@ const ProductEditScreen = ({ match, history }) => {
                 style={{ borderRadius: 10 }}
                 type="text"
                 placeholder="Enter image url"
-                value={image}
+                // value={image}
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
               <h5 align="center">Or</h5>
@@ -155,7 +155,7 @@ const ProductEditScreen = ({ match, history }) => {
                 style={{ borderRadius: 10 }}
                 type="text"
                 placeholder="Enter brand"
-                value={brand}
+                // value={brand}
                 onChange={(e) => setBrand(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -166,7 +166,7 @@ const ProductEditScreen = ({ match, history }) => {
                 style={{ borderRadius: 10 }}
                 type="number"
                 placeholder="Enter countInStock"
-                value={countInStock}
+                // value={countInStock}
                 onChange={(e) => setCountInStock(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -203,12 +203,12 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId="description">
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Description (Break with ",")</Form.Label>
               <Form.Control
                 style={{ borderRadius: 10 }}
                 type="text"
                 placeholder="Enter description"
-                value={description}
+                // value={description}
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
             </Form.Group>
