@@ -27,15 +27,7 @@ const HomeScreen = ({ match }) => {
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
   }, [dispatch, keyword, pageNumber])
-
-    var date = Date.now()
-
-    console.log(date)
-
-    console.log("date"+date.toLocaleString( { timeZone: 'Asia/Chennai' }))
-    console.log("date"+Date.now().toLocaleString( "en-US",{ timeZone: 'Asia/Jakarta' }))
-    console.log(Date.now())
-    console.log(Date.now().toString())
+  
 
   return (
 

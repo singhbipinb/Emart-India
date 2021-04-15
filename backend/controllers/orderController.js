@@ -62,9 +62,9 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 
   if (order) {
     order.isPaid = true
-    console.log("date"+Date.now().toLocaleString('en-US', { timeZone: 'Asia/Chennai' }))
-    order.paidAt = Date.now()
-    console.log(Date.now())
+    // console.log("date"+Date.now().toLocaleString('en-US', { timeZone: 'Asia/Chennai' }))
+    order.paidAt = new Date()
+    // console.log(Date.now())
 
 
     const updatedOrder = await order.save()
@@ -86,10 +86,12 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
 
     try{
     order.isDelivered = true
-    var date = Date.now().toLocaleString('en-US', { timeZone: 'Asia/Chennai' })
-    console.log("date"+Date.now().toLocaleString('en-US', { timeZone: 'IST' }))
-    order.deliveredAt = Date.now()
-      console.log("Date" + Date.now())
+    // var date = Date.now().toLocaleString('en-US', { timeZone: 'Asia/Chennai' })
+    // console.log("date"+Date.now().toLocaleString('en-US', { timeZone: 'IST' }))
+    // order.deliveredAt = moment(new Date().toLocaleString("en-IN", {timeZone: "Asia/Kolkata"})).format('YYYY-MM-DD[T00:00:00.000Z]')
+      // console.log("Date" + Date.now())
+
+      order.deliveredAt =new Date()
 
 
     const updatedOrder = await order.save()
