@@ -23,7 +23,7 @@ const ProductCarousel = () => {
   ) : (
     <Carousel>
       <Carousel.Item>
-        <a href="#s3">
+        <a href="/browse/Home Appliances">
           <img
             className="d-block w-100"
             src="/Images/Slide/slide3.jpg"
@@ -33,7 +33,7 @@ const ProductCarousel = () => {
         </a>
       </Carousel.Item>
       <Carousel.Item>
-        <a href="#s3">
+        <a href="/browse/Laptops">
           <img
             className="d-block w-100"
             src="/Images/Slide/slide2.jpg"
@@ -43,7 +43,7 @@ const ProductCarousel = () => {
         </a>
       </Carousel.Item>
       <Carousel.Item>
-        <a href="#s3">
+        <a href="/browse/Cover and Cases">
           <img
             className="d-block w-100"
             src="/Images/Slide/Ms1.jpg"
@@ -53,7 +53,7 @@ const ProductCarousel = () => {
         </a>
       </Carousel.Item>
       <Carousel.Item>
-        <a href="#s1">
+        <a href="/browse/Audio Devices">
           <img
             className="d-block w-100"
             src="/Images/Slide/Ms2.png"
@@ -63,7 +63,7 @@ const ProductCarousel = () => {
         </a>
       </Carousel.Item>
       <Carousel.Item>
-        <a href="#s3">
+        <a href="/browse/Smart Wearables">
           <img
             className="d-block w-100"
             src="/Images/Slide/slide4.jpg"

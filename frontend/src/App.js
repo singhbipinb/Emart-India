@@ -21,6 +21,9 @@ import OrderListScreen from "./Pages/OrderListPage";
 import BrowseScreen from "./Pages/BrowsePage";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsConditions from "./components/TermsConditions";
+import Disclaimer from "./components/Disclaimer";
 
 const App = () => {
   return (
@@ -41,6 +44,9 @@ const App = () => {
           <Route path="/admin/user/:id/edit" component={UserEditScreen} />
           <Route path="/About" component={About} />
           <Route path="/Contact" component={Contact} />
+          <Route path="/PrivacyPolicy" component={PrivacyPolicy} />
+          <Route path="/TermsConditions" component={TermsConditions} />
+          <Route path="/Disclaimer" component={Disclaimer} />
           <Route
             path="/admin/productlist"
             component={ProductListScreen}

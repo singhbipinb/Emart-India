@@ -21,13 +21,15 @@ class CategoriesNavigation extends Component {
           <Container fluid>
             <Row align={"center"} style={{ display: "flex" }} fluid>
               <Col>
-                <img
-                  variant="top"
-                  src="/Images/mobile.png"
-                  alt="mobile"
-                  height="100"
-                  width="200"
-                />
+                <a href="/browse/Smartphones">
+                  <img
+                    variant="top"
+                    src="/Images/mobile.png"
+                    alt="mobile"
+                    height="100"
+                    width="200"
+                  />
+                </a>
                 <NavDropdown
                   title="Smartphones and Accessories"
                   id="nav-dropdown"
@@ -48,15 +50,17 @@ class CategoriesNavigation extends Component {
               </Col>
 
               <Col>
-                <img
-                  variant="top"
-                  src="/Images/ComputerAccessories.webp"
-                  alt="computer"
-                  height="100"
-                  width="180"
-                />
+                <a href="/browse/Laptop">
+                  <img
+                    variant="top"
+                    src="/Images/ComputerAccessories.webp"
+                    alt="computer"
+                    height="100"
+                    width="180"
+                  />
+                </a>
                 <NavDropdown title="Computer and Accessories" id="nav-dropdown">
-                  <LinkContainer to="/browse/Laptops">
+                  <LinkContainer to="/browse/Laptop">
                     <NavDropdown.Item>Laptop</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/browse/Mouse and Keyboard">
@@ -75,13 +79,15 @@ class CategoriesNavigation extends Component {
               </Col>
 
               <Col>
-                <img
-                  variant="top"
-                  src="/Images/gadgets.png"
-                  alt="gadget"
-                  height="100"
-                  width="125"
-                />
+                <a href="/browse/Smart Wearables">
+                  <img
+                    variant="top"
+                    src="/Images/gadgets.png"
+                    alt="gadget"
+                    height="100"
+                    width="125"
+                  />
+                </a>
                 <NavDropdown title="Gadgets" id="nav-dropdown">
                   <LinkContainer to="/browse/Smart Wearables">
                     <NavDropdown.Item eventKey="4.1">
@@ -94,7 +100,7 @@ class CategoriesNavigation extends Component {
                   <LinkContainer to="/browse/Camera and Accessories">
                     <NavDropdown.Item>Camera and Accessories</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to="/Tablets">
+                  <LinkContainer to="/browse/Tablets">
                     <NavDropdown.Item>Tablets</NavDropdown.Item>
                   </LinkContainer>{" "}
                   <LinkContainer to="/browse/Audio Devices">
@@ -104,13 +110,15 @@ class CategoriesNavigation extends Component {
               </Col>
 
               <Col>
-                <img
-                  variant="top"
-                  src="/Images/homeappliances.png"
-                  alt="home"
-                  height="100"
-                  width="180"
-                />
+                <a href="/browse/Home Appliances">
+                  <img
+                    variant="top"
+                    src="/Images/homeappliances.png"
+                    alt="home"
+                    height="100"
+                    width="180"
+                  />
+                </a>
                 <NavDropdown title="Home Appliances" id="nav-dropdown">
                   <LinkContainer to="/browse/Televisions">
                     <NavDropdown.Item>Televisions</NavDropdown.Item>

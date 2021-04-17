@@ -1,35 +1,36 @@
 import React, { Component } from "react";
 import {
-  Button,
-  Col,
   Container,
-  Form,
-  FormControl,
-  InputGroup,
   Row,
+  Col,
+  Form,
+  InputGroup,
+  FormControl,
+  Button,
 } from "react-bootstrap";
-import { MdCall, MdEmail, MdLocationOn } from "react-icons/md";
+import { MdEmail, MdLocationOn, MdCall } from "react-icons/md";
 import {
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaLinkedin,
+  FaPinterestSquare,
+  FaWhatsappSquare,
+  FaGooglePlusSquare,
+  FaRssSquare,
+} from "react-icons/fa";
+import { FcShop, FcAbout, FcLock, FcFile, FcDisclaimer } from "react-icons/fc";
+import {
+  FaCcMastercard,
+  FaCcVisa,
+  FaCcPaypal,
   FaCcAmazonPay,
   FaCcApplePay,
   FaCcDiscover,
-  FaCcMastercard,
-  FaCcPaypal,
-  FaCcVisa,
-  FaFacebookSquare,
-  FaGooglePlusSquare,
-  FaLinkedin,
-  FaPinterestSquare,
-  FaRssSquare,
-  FaTwitterSquare,
-  FaWhatsappSquare,
 } from "react-icons/fa";
-import { FcAbout, FcFile, FcLock, FcShop } from "react-icons/fc";
-import { SiGooglepay, SiSamsungpay } from "react-icons/si";
+import { SiSamsungpay, SiGooglepay } from "react-icons/si";
 
 class Footer extends Component {
   state = {};
-
   render() {
     return (
       <div style={{ backgroundColor: "#00251a", color: "white" }}>
@@ -174,7 +175,7 @@ class Footer extends Component {
                 <br />
                 <FcLock size="20px" />{" "}
                 <a
-                  href="#privacy"
+                  href="/PrivacyPolicy"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   {" "}
@@ -183,11 +184,20 @@ class Footer extends Component {
                 <br />
                 <FcFile size="20px" />{" "}
                 <a
-                  href="#terms"
+                  href="/TermsConditions"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   {" "}
                   Terms &amp; Conditions{" "}
+                </a>
+                <br />
+                <FcDisclaimer size="20px" />{" "}
+                <a
+                  href="/Disclaimer"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  {" "}
+                  Disclaimer{" "}
                 </a>
               </div>
             </Col>
