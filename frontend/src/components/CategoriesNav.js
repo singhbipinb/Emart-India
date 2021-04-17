@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Nav, NavDropdown, Container, Row, Col } from "react-bootstrap";
+import { Col, Container, Nav, NavDropdown, Row } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 class CategoriesNavigation extends Component {
@@ -14,11 +14,12 @@ class CategoriesNavigation extends Component {
           paddingTop: 5,
           marginLeft: 0,
           align: "center",
+          alignContent: "center",
         }}
       >
         <Nav variant="pills" activeKey="1">
           <Container fluid>
-            <Row align={"center"}>
+            <Row align={"center"} style={{ display: "flex" }} fluid>
               <Col>
                 <img
                   variant="top"
@@ -27,9 +28,12 @@ class CategoriesNavigation extends Component {
                   height="100"
                   width="200"
                 />
-                <NavDropdown title="Mobiles and Accessories" id="nav-dropdown">
+                <NavDropdown
+                  title="Smartphones and Accessories"
+                  id="nav-dropdown"
+                >
                   <LinkContainer to="/browse/Smartphones">
-                    <NavDropdown.Item>Mobile</NavDropdown.Item>
+                    <NavDropdown.Item>Smartphones</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/browse/Travel Adapter">
                     <NavDropdown.Item>Travel Adapter</NavDropdown.Item>

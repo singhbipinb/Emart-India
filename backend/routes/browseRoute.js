@@ -1,9 +1,8 @@
-import express from 'express'
-const router = express.Router()
+import express from "express";
+import { getbProducts } from "../controllers/productController.js";
 
-import {getbProducts,
-} from '../controllers/productController.js'
+const router = express.Router();
 
-router.get('/:category',getbProducts)
+router.get("/:category", getbProducts);
 
-export default router
+export default router;

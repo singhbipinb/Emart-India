@@ -37,10 +37,10 @@ const Header = () => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <LinkContainer to="/about">
+              <LinkContainer to="/About">
                 <Nav.Link>About</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/contact">
+              <LinkContainer to="/Contact">
                 <Nav.Link>Contact</Nav.Link>
               </LinkContainer>
             </Nav>
@@ -78,7 +78,8 @@ const Header = () => {
 
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i> Cart ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                  <i className="fas fa-shopping-cart"></i> Cart (
+                  {cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 </Nav.Link>
               </LinkContainer>
             </Nav>

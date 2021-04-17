@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -34,7 +34,14 @@ const LoginScreen = ({ location, history }) => {
       <h1>Sign In</h1>
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
-      <Form onSubmit={submitHandler} style={{boxShadow: "5px 5px 5px #004d40", backgroundColor:"#90EE90",padding:20}}>
+      <Form
+        onSubmit={submitHandler}
+        style={{
+          boxShadow: "5px 5px 5px #004d40",
+          backgroundColor: "#90EE90",
+          padding: 20,
+        }}
+      >
         <Form.Group controlId="email">
           <Form.Label>Email Address</Form.Label>
           <Form.Control

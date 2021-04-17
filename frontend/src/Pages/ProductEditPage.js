@@ -1,14 +1,14 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Form, Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { listProductDetails, updateProduct } from "../actions/productActions";
 import { PRODUCT_UPDATE_RESET } from "../constants/productConstants";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import arrowBackThickFill from "@iconify-icons/akar-icons/arrow-back-thick-fill";
 
 const ProductEditScreen = ({ match, history }) => {
@@ -98,7 +98,7 @@ const ProductEditScreen = ({ match, history }) => {
       <Link to="/admin/productlist" className="btn btn-light my-3">
         <Icon icon={arrowBackThickFill} height="50" width="70" />
       </Link>
-      <FormContainer >
+      <FormContainer>
         <h1>Edit Product</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
@@ -107,7 +107,14 @@ const ProductEditScreen = ({ match, history }) => {
         ) : error ? (
           <Message variant="danger">{error}</Message>
         ) : (
-          <Form onSubmit={submitHandler} style={{boxShadow: "5px 5px 5px #004d40", backgroundColor:"#90EE90",padding:20}}>
+          <Form
+            onSubmit={submitHandler}
+            style={{
+              boxShadow: "5px 5px 5px #004d40",
+              backgroundColor: "#90EE90",
+              padding: 20,
+            }}
+          >
             <Form.Group controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control

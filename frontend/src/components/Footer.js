@@ -1,36 +1,35 @@
 import React, { Component } from "react";
 import {
-  Container,
-  Row,
-  Col,
-  Form,
-  InputGroup,
-  FormControl,
   Button,
+  Col,
+  Container,
+  Form,
+  FormControl,
+  InputGroup,
+  Row,
 } from "react-bootstrap";
-import { MdEmail, MdLocationOn, MdCall } from "react-icons/md";
+import { MdCall, MdEmail, MdLocationOn } from "react-icons/md";
 import {
-  FaFacebookSquare,
-  FaTwitterSquare,
-  FaLinkedin,
-  FaPinterestSquare,
-  FaWhatsappSquare,
-  FaGooglePlusSquare,
-  FaRssSquare,
-} from "react-icons/fa";
-import { FcShop, FcAbout, FcLock, FcFile } from "react-icons/fc";
-import {
-  FaCcMastercard,
-  FaCcVisa,
-  FaCcPaypal,
   FaCcAmazonPay,
   FaCcApplePay,
   FaCcDiscover,
+  FaCcMastercard,
+  FaCcPaypal,
+  FaCcVisa,
+  FaFacebookSquare,
+  FaGooglePlusSquare,
+  FaLinkedin,
+  FaPinterestSquare,
+  FaRssSquare,
+  FaTwitterSquare,
+  FaWhatsappSquare,
 } from "react-icons/fa";
-import { SiSamsungpay, SiGooglepay } from "react-icons/si";
+import { FcAbout, FcFile, FcLock, FcShop } from "react-icons/fc";
+import { SiGooglepay, SiSamsungpay } from "react-icons/si";
 
 class Footer extends Component {
   state = {};
+
   render() {
     return (
       <div style={{ backgroundColor: "#00251a", color: "white" }}>

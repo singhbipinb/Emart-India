@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  Row,
+  Button,
+  Card,
   Col,
+  Form,
   Image,
   ListGroup,
-  Card,
-  Button,
-  Form,
+  Row,
 } from "react-bootstrap";
 import Rating from "../components/Rating";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import Meta from "../components/Meta";
 import {
-  listProductDetails,
   createProductReview,
+  listProductDetails,
 } from "../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../constants/productConstants";
 import { Icon } from "@iconify/react";
@@ -67,18 +67,18 @@ const ProductScreen = ({ history, match }) => {
     );
   };
 
-    var arr = []
-    // arr = spltdis.split(",")
-    if(typeof product.description ==="string"){
-      // arr = spltdis.toUpperCase().split(",")
-      arr = product.description.split(",")
-    }
-//     console.log(arr)
-// return arr
-//
-//   }
+  var arr = [];
+  // arr = spltdis.split(",")
+  if (typeof product.description === "string") {
+    // arr = spltdis.toUpperCase().split(",")
+    arr = product.description.split(",");
+  }
+  //     console.log(arr)
+  // return arr
+  //
+  //   }
 
-// Desc()
+  // Desc()
 
   return (
     <>
@@ -93,11 +93,19 @@ const ProductScreen = ({ history, match }) => {
         <>
           <Meta title={product.name} />
           <Row>
-            <Col md={6} >
-              <Image src={product.image} alt={product.name} fluid style={{boxShadow: "5px 5px 5px #004d40"}} />
+            <Col md={6}>
+              <Image
+                src={product.image}
+                alt={product.name}
+                fluid
+                style={{ boxShadow: "5px 5px 5px #004d40" }}
+              />
             </Col>
             <Col md={3}>
-              <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40"}}>
+              <ListGroup
+                variant="flush"
+                style={{ boxShadow: "5px 5px 5px #004d40" }}
+              >
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
                 </ListGroup.Item>
@@ -108,12 +116,14 @@ const ProductScreen = ({ history, match }) => {
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ₹{product.price}</ListGroup.Item>
-
-              </ListGroup >
+              </ListGroup>
             </Col>
             <Col md={3}>
               <Card>
-                <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40"}}>
+                <ListGroup
+                  variant="flush"
+                  style={{ boxShadow: "5px 5px 5px #004d40" }}
+                >
                   <ListGroup.Item>
                     <Row>
                       <Col>Price:</Col>
@@ -170,39 +180,42 @@ const ProductScreen = ({ history, match }) => {
               </Card>
             </Col>
           </Row>
-          <br/>
+          <br />
           <Row>
-
-
             <Col>
-      <ListGroup style={{boxShadow: "5px 5px 5px #004d40"}}>
-              <ListGroup.Item>
-                <h2 align="center">Description</h2><br/>
+              <ListGroup style={{ boxShadow: "5px 5px 5px #004d40" }}>
+                <ListGroup.Item>
+                  <h2 align="center">Description</h2>
+                  <br />
 
-<span style={{fontSize:20}}>
-                {
-                  arr.map(function (name, index) {
-                    return (
+                  <span style={{ fontSize: 20 }}>
+                    {arr.map(function (name, index) {
+                      return (
                         <tr key={index}>
                           <Col key={index}>- {name}</Col>
                         </tr>
-                    );
-                  })}
-</span>
-              </ListGroup.Item>
-
-      </ListGroup>
+                      );
+                    })}
+                  </span>
+                </ListGroup.Item>
+              </ListGroup>
             </Col>
           </Row>
           <Row>
             <Col>
-
               <br />
 
               {product.reviews.length === 0 && <Message>No Reviews</Message>}
-              <ListGroup variant="flush" style={{boxShadow: "5px 5px 5px #004d40",backgroundColor:"White"}}>
-                <br/>
-                <h2 align="center">Reviews</h2><br/>
+              <ListGroup
+                variant="flush"
+                style={{
+                  boxShadow: "5px 5px 5px #004d40",
+                  backgroundColor: "White",
+                }}
+              >
+                <br />
+                <h2 align="center">Reviews</h2>
+                <br />
                 {product.reviews.map((review) => (
                   <ListGroup.Item key={review._id}>
                     <strong>{review.name}</strong>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Accordion } from "react-bootstrap";
+import { Accordion, Button, Form } from "react-bootstrap";
 import { MdSearch } from "react-icons/md";
 
 const SearchBox = ({ history }) => {

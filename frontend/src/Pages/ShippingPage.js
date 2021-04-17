@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
 import CheckoutSteps from "../components/CheckoutSteps";
@@ -23,10 +23,17 @@ const ShippingScreen = ({ history }) => {
   };
 
   return (
-    <FormContainer style={{boxShadow: "5px 5px 5px #004d40"}}>
+    <FormContainer style={{ boxShadow: "5px 5px 5px #004d40" }}>
       <CheckoutSteps step1 step2 />
       <h1 align="center">Shipping</h1>
-      <Form onSubmit={submitHandler} style={{boxShadow: "5px 5px 5px #004d40", padding:30, borderColor:"blue"}}>
+      <Form
+        onSubmit={submitHandler}
+        style={{
+          boxShadow: "5px 5px 5px #004d40",
+          padding: 30,
+          borderColor: "blue",
+        }}
+      >
         <Form.Group controlId="address">
           <Form.Label>Address</Form.Label>
           <Form.Control
@@ -78,8 +85,7 @@ const ShippingScreen = ({ history }) => {
         <Button
           type="submit"
           variant="primary"
-
-          style={{ borderRadius: 10, backgroundColor: "#08966c"}}
+          style={{ borderRadius: 10, backgroundColor: "#08966c" }}
         >
           Continue
         </Button>

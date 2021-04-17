@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Container, Card, CardGroup } from "react-bootstrap";
+import { Card, CardGroup, Container } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 import deliveryTruck from "@iconify-icons/emojione/delivery-truck";
 
 class QuickFeatures extends Component {
   state = {};
+
   render() {
     return (
       <div
