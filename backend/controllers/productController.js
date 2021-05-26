@@ -5,7 +5,7 @@ import Product from "../models/productModel.js";
 // @route   GET /api/products
 // @access  Public
 const getProducts = asyncHandler(async (req, res) => {
-  const pageSize = 10;
+  const pageSize = 12;
   const page = Number(req.query.pageNumber) || 1;
 
   const keyword = req.query.keyword
@@ -27,7 +27,7 @@ const getProducts = asyncHandler(async (req, res) => {
 
 const getbProducts = asyncHandler(async (req, res) => {
   const category = req.params.category;
-  const pageSize = 10;
+  const pageSize = 12;
   const page = Number(req.query.pageNumber) || 1;
 
   // const category = req.query.category
@@ -39,12 +39,8 @@ const getbProducts = asyncHandler(async (req, res) => {
   //     }
   //     : {}
 
-  const count = await Product.countDocuments({ ...category });
-  const products = await Product.find()
-    .where("category")
-    .equals(category)
-    .limit(pageSize)
-    .skip(pageSize * (page - 1));
+  const count = await Product.countDocuments({ category: category });
+  const products = await Product.find().where("category").equals(category);
 
   res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
@@ -102,15 +98,8 @@ const createProduct = asyncHandler(async (req, res) => {
 // @route   PUT /api/products/:id
 // @access  Private/Admin
 const updateProduct = asyncHandler(async (req, res) => {
-  const {
-    name,
-    price,
-    description,
-    image,
-    brand,
-    category,
-    countInStock,
-  } = req.body;
+  const { name, price, description, image, brand, category, countInStock } =
+    req.body;
 
   const product = await Product.findById(req.params.id);
 

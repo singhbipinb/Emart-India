@@ -9,6 +9,7 @@ const ShippingScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
 
+  const [mobile, setMobile] = useState(shippingAddress.mobile);
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
@@ -18,7 +19,9 @@ const ShippingScreen = ({ history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(saveShippingAddress({ address, city, postalCode, country }));
+    dispatch(
+      saveShippingAddress({ mobile, address, city, postalCode, country })
+    );
     history.push("/payment");
   };
 
@@ -34,6 +37,18 @@ const ShippingScreen = ({ history }) => {
           borderColor: "blue",
         }}
       >
+        <Form.Group controlId="mobile">
+          <Form.Label>Address</Form.Label>
+          <Form.Control
+            style={{ borderRadius: 10 }}
+            type="text"
+            placeholder="Enter Mobile Number"
+            value={mobile}
+            required
+            onChange={(e) => setMobile(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
+
         <Form.Group controlId="address">
           <Form.Label>Address</Form.Label>
           <Form.Control

@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { browseProducts } from "../actions/productActions";
 import Meta from "../components/Meta";
 import arrowBackThickFill from "@iconify-icons/akar-icons/arrow-back-thick-fill";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 
 const BrowseScreen = ({ match }) => {
   const category = match.params.category;
@@ -47,11 +47,6 @@ const BrowseScreen = ({ match }) => {
               </Col>
             ))}
           </Row>
-          <Paginate
-            pages={pages}
-            page={page}
-            category={category ? category : ""}
-          />
         </>
       )}
     </div>
